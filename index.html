@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Stadiums Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        #filter {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .league-button, #zoom-out-button {
+            margin: 0 5px;
+            padding: 8px 12px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        #container {
+            display: flex;
+            width: 100%;
+            max-width: 1500px;
+        }
+        #map {
+            width: 70%; 
+            height: 650px; 
+        }
+        #table-container {
+            width: 30%;
+            max-height: 650px; 
+            overflow-y: auto;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+            border-left: 1px solid #ddd;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Football Teams: Performance Insights</h1>
+    <div id="filter">
+        <button class="league-button" data-league="United Kingdom">
+            <span class="league-name">England</span> <span class="league-type">(Premier League)</span>
+        </button>
+        <button class="league-button" data-league="Germany">
+            <span class="league-name">Germany</span> <span class="league-type">(Bundesliga)</span>
+        </button>
+        <button class="league-button" data-league="Italy">
+            <span class="league-name">Italy</span> <span class="league-type">(Serie A)</span>
+        </button>
+        <button class="league-button" data-league="Spain">
+            <span class="league-name">Spain</span> <span class="league-type">(La Liga)</span>
+        </button>
+        <button class="league-button" data-league="France">
+            <span class="league-name">France</span> <span class="league-type">(Le Championnat)</span>
+        </button>
+        <button id="zoom-out-button">Zoom Out</button>
+        
+    </div>
+    <div id="container">
+        <!-- Map Container -->
+        <div id="map"></div>
+
+        <!-- Table Container -->
+        <div id="table-container">
+            <h2 id="table-title"></h2> 
+            <button id="back-button" class="#back-to-league-btn" style="display: none;">Back</button> <!-- Back Button -->
+            <table id="details-table">
+                <thead>
+                    <tr>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#filter {
+    margin-bottom: 10px;
+}
+
+.league-button {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #4c38ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.league-button.active {
+    background-color: #2e1275;
+    color: white; 
+}
+
+.league-name {
+    font-weight: bold; 
+    font-size: 1.1em; 
+}
+
+.league-type {
+    font-style: italic;
+    font-size: 0.9em; 
+}
+
+.league-button:hover {
+    background-color: #2e1275;
+}
+
+.tooltip {
+    position: absolute;
+    background: #e5f3ff; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    opacity: 0; 
+    z-index: 10000; 
+    transition: opacity 0.3s ease; 
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    font-size: 14px; 
+    color: #000000; 
+}
+
+.tooltip .stadium-name {
+    color: #2f0592;
+    font-weight: bold; 
+    font-size: 16px; 
+}
+
+.tooltip .tooltip-text {
+    margin-top: 5px; 
+    color: #555;
+}
+
+.team-name-icon {
+    background-color: rgb(217, 217, 217); 
+    border-radius: 4px; 
+    padding: 2px; 
+    font-size: 10px; 
+    text-align: center; 
+}
+
+.clicked-name-icon {
+    background-color: orange; 
+    border-radius: 4px;
+    padding: 2px; 
+    font-size: 10px; 
+    text-align: center; 
+}
+
+.win-rate-icon {
+    font-size: 10px;
+    text-align: center; 
+    color: black; 
+}
+
+#back-to-league-btn {
+    background-color: #007BFF; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    padding: 5px 10px; 
+}
+
+#back-to-league-btn:hover {
+    background-color: #0056b3; 
+}
+
+.league-outline {
+    pointer-events: none; 
+}
